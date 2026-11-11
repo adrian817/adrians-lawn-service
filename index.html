@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adrian's Lawn Service &amp; Handyman, LLC | DFW Lawn Care, Landscaping &amp; Handyman</title>
+<meta name="description" content="Reliable lawn service, affordable landscaping and handyman work in Dallas, Fort Worth, Arlington and across DFW. Weekly mowing, irrigation, sod, fences, retaining walls, pressure washing and more. Free quotes.">
+<meta name="keywords" content="DFW lawn service, Dallas landscaping, Fort Worth lawn care, Arlington handyman, reliable lawn service, affordable landscaping, weekly mowing, weed control, sprinkler repair, irrigation, sod installation, mulch installation, retaining walls, fence repair, fence installation, tree trimming, hedge trimming, drainage solutions, pressure washing, commercial landscaping, property maintenance">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LandscapingBusiness","name":"Adrian's Lawn Service and Handyman, LLC","email":"aqqtown@gmail.com","areaServed":["Dallas, TX","Fort Worth, TX","Arlington, TX","Irving, TX","Hurst, TX","Frisco, TX"],"description":"Lawn care, landscaping, irrigation and handyman services for residential and commercial properties in Dallas–Fort Worth."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-900: #12301f;
+    --green-700: #1f5a36;
+    --green-500: #2f8a4f;
+    --lime: #b8e05a;
+    --cream: #f7f5ee;
+    --ink: #1b1f1c;
+    --muted: #5d665f;
+    --line: #e2e0d6;
+    --card: #ffffff;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+  h1, h2, h3 { font-family: Archivo, Inter, sans-serif; line-height: 1.15; margin: 0 0 .5em; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 10; background: var(--green-900); color: #fff; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: Archivo; font-weight: 800; font-size: 1.1rem; }
+  .logo svg { flex: none; }
+  .logo .amp { color: var(--lime); }
+  @media (max-width: 420px) { .logo { font-size: .95rem; } }
+  nav { display: flex; gap: 22px; font-weight: 500; font-size: .95rem; }
+  nav a { text-decoration: none; opacity: .85; }
+  nav a:hover { opacity: 1; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 0; cursor: pointer; font-size: 1rem; font-family: inherit; }
+  .btn-lime { background: var(--lime); color: var(--green-900); }
+  .btn-lime:hover { filter: brightness(1.05); }
+  .btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.5); }
+  .btn-ghost:hover { border-color: #fff; }
+  @media (max-width: 760px) { nav { display: none; } }
+  @media (max-width: 520px) { header .btn { display: none; } }
+  @media (min-width: 1000px) { #service-grid { grid-template-columns: repeat(4, 1fr); } }
+  .card ul { margin: 0 0 14px; padding: 0; list-style: none; color: var(--muted); font-size: .95rem; }
+  .card li { padding: 3px 0 3px 18px; position: relative; }
+  .card li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 7px; height: 7px; border-radius: 50%; background: var(--green-500); }
+
+  /* Hero */
+  .hero { background: linear-gradient(100deg, rgba(18,48,31,.96) 0%, rgba(18,48,31,.85) 45%, rgba(18,48,31,.35) 100%), url("photos/hero.jpg") center 60% / cover, var(--green-900); color: #fff; padding: 84px 0 110px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 40px; background: var(--cream);
+    clip-path: polygon(0 100%, 0 40%, 2% 0, 4% 45%, 6% 5%, 8% 40%, 10% 0, 12% 45%, 14% 8%, 16% 42%, 18% 0, 20% 45%, 22% 5%, 24% 40%, 26% 0, 28% 45%, 30% 8%, 32% 42%, 34% 0, 36% 45%, 38% 5%, 40% 40%, 42% 0, 44% 45%, 46% 8%, 48% 42%, 50% 0, 52% 45%, 54% 5%, 56% 40%, 58% 0, 60% 45%, 62% 8%, 64% 42%, 66% 0, 68% 45%, 70% 5%, 72% 40%, 74% 0, 76% 45%, 78% 8%, 80% 42%, 82% 0, 84% 45%, 86% 5%, 88% 40%, 90% 0, 92% 45%, 94% 8%, 96% 42%, 98% 0, 100% 40%, 100% 100%); }
+  .hero .eyebrow { display: inline-block; background: rgba(184,224,90,.18); color: var(--lime); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: .85rem; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); font-weight: 800; max-width: 14ch; }
+  .hero h1 span { color: var(--lime); }
+  .hero p { font-size: 1.15rem; max-width: 52ch; opacity: .9; margin: 0 0 30px; }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .trust { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 44px; font-size: .95rem; opacity: .9; }
+  .trust div { display: flex; align-items: center; gap: 8px; }
+  .trust b { color: var(--lime); }
+
+  /* Sections */
+  section { padding: 80px 0; }
+  .section-head { max-width: 640px; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .section-head p { color: var(--muted); margin: 0; font-size: 1.05rem; }
+  .kicker { color: var(--green-500); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; margin-bottom: 8px; display: block; }
+
+  /* Services */
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .card .icon { width: 46px; height: 46px; border-radius: 12px; background: #e8f3dc; display: grid; place-items: center; margin-bottom: 16px; }
+  .card h3 { font-size: 1.2rem; }
+  .card p { color: var(--muted); margin: 0 0 14px; }
+  .price { font-weight: 700; color: var(--green-700); font-size: .95rem; }
+
+  /* Why us */
+  .why { background: var(--green-900); color: #fff; }
+  .why .section-head p { color: rgba(255,255,255,.75); }
+  .why .kicker { color: var(--lime); }
+  .why .card { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12); }
+  .why .card p { color: rgba(255,255,255,.75); }
+  .why .card .icon { background: rgba(184,224,90,.15); }
+
+  /* Areas */
+  .areas { display: flex; flex-wrap: wrap; gap: 10px; }
+  .areas span { background: var(--card); border: 1px solid var(--line); padding: 10px 18px; border-radius: 999px; font-weight: 500; }
+
+  /* Gallery */
+  .gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .gallery figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--card); border: 1px solid var(--line); }
+  .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+  .gallery figcaption { padding: 10px 14px; font-size: .9rem; color: var(--muted); }
+  .gallery a { display: block; text-decoration: none; }
+  .gallery img { transition: transform .3s; }
+  .gallery figure:hover img { transform: scale(1.04); }
+  .gallery figure { position: relative; }
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+  .ba figure { margin: 0; position: relative; }
+  .ba img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; border-radius: 10px; }
+  .ba .tag { position: absolute; top: 12px; left: 12px; background: var(--green-900); color: #fff; font-weight: 700; font-size: .8rem; padding: 5px 12px; border-radius: 999px; letter-spacing: .04em; }
+  .ba .tag.after { background: var(--lime); color: var(--green-900); }
+  .ba-caption { grid-column: 1 / -1; color: var(--muted); font-size: .95rem; padding: 2px 4px; }
+  @media (min-width: 860px) { .ba img { aspect-ratio: 4/3; } }
+  .gallery .placeholder { aspect-ratio: 4/3; display: grid; place-items: center; background: repeating-linear-gradient(135deg, #eef3e6 0 12px, #e6eddb 12px 24px); color: var(--green-700); font-weight: 600; font-size: .9rem; }
+
+  /* Quote */
+  .quote-wrap { display: grid; gap: 40px; grid-template-columns: 1fr 1.2fr; align-items: start; }
+  @media (max-width: 860px) { .quote-wrap { grid-template-columns: 1fr; } }
+  form { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: grid; gap: 16px; }
+  .row { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+  label { font-weight: 600; font-size: .9rem; display: grid; gap: 6px; }
+  input, select, textarea { font: inherit; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: #fcfcfa; color: var(--ink); width: 100%; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--green-500); outline-offset: 1px; border-color: transparent; }
+  .checks { display: flex; flex-wrap: wrap; gap: 8px 18px; font-weight: 500; }
+  .checks label { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+  .checks input { width: auto; }
+  form .btn { justify-self: start; background: var(--green-700); color: #fff; }
+  form .btn:hover { background: var(--green-500); }
+  .contact-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
+  .contact-list li { display: flex; gap: 12px; align-items: center; }
+  .contact-list a { font-weight: 600; color: var(--green-700); }
+
+  footer { background: var(--green-900); color: rgba(255,255,255,.7); padding: 32px 0; font-size: .9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+  /* Mobile call/text bar (only shown when a phone number is set) */
+  .mobile-bar { display: none; }
+  @media (max-width: 760px) {
+    body.has-phone .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; }
+    body.has-phone { padding-bottom: 58px; }
+    .mobile-bar a { padding: 17px; text-align: center; font-weight: 700; text-decoration: none; }
+    .mobile-bar .call { background: var(--lime); color: var(--green-900); }
+    .mobile-bar .text { background: var(--green-700); color: #fff; }
+  }
+  [data-phone-only] { display: none !important; }
+  body.has-phone [data-phone-only] { display: revert !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#b8e05a"/><path d="M8 25c2-6 3-10 3-14M13 25c1-5 2-9 4-13M18 25c0-4 1-8 4-12M23 25c0-3 1-6 3-9" stroke="#12301f" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      <span>Adrian's Lawn Service <span class="amp">&amp; Handyman</span></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#areas">Areas</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#quote">Contact</a>
+    </nav>
+    <a class="btn btn-lime" href="#quote" style="padding:9px 18px;font-size:.92rem">Free Quote</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Lawn Care · Landscaping · Handyman · DFW</span>
+      <h1>A sharp lawn, <span>every single visit.</span></h1>
+      <p>Reliable lawn service, affordable landscaping and handyman work for homes and businesses across Dallas, Fort Worth and Arlington. One call takes care of the whole property.</p>
+      <div class="actions">
+        <a class="btn btn-lime" href="#quote">Get a Free Quote</a>
+        <a class="btn btn-ghost" data-phone-only data-call href="#">Call Now</a>
+        <a class="btn btn-ghost" data-phone-only data-text href="#">Text Us</a>
+      </div>
+      <div class="trust">
+        <div><b>✓</b> Weekly mowing plans</div>
+        <div><b>✓</b> Residential &amp; commercial</div>
+        <div><b>✓</b> Free, no-pressure quotes</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">What we do</span>
+        <h2>Services</h2>
+        <p>From weekly mowing to retaining walls and fence repair, we handle the outdoor improvements and property maintenance your place needs.</p>
+      </div>
+      <div class="grid" id="service-grid"></div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Why customers stay</span>
+        <h2>Done right, on schedule</h2>
+        <p>We run our route like a business, so your yard never gets skipped or forgotten.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon">📅</div><h3>Reliable schedule</h3><p>Every property is tracked with a last-visit and next-visit date, so your service day stays your service day.</p></div>
+        <div class="card"><div class="icon">🛠️</div><h3>Maintained equipment</h3><p>Commercial mowers and tools serviced on hour-based schedules. Sharp blades mean a clean cut, not torn grass.</p></div>
+        <div class="card"><div class="icon">🏡</div><h3>One call, whole property</h3><p>Lawn, landscaping, irrigation and handyman work from one crew. No juggling five different contractors.</p></div>
+        <div class="card"><div class="icon">💬</div><h3>Easy to reach</h3><p>Questions, skips, or extra work? Just send a message and we'll take care of it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Where we work</span>
+        <h2>DFW service areas</h2>
+        <p>Serving the Dallas–Fort Worth Metroplex. Don't see your city? Ask us, we may already be in your neighborhood.</p>
+      </div>
+      <div class="areas" id="area-list"></div>
+    </div>
+  </section>
+
+  <section id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Our work</span>
+        <h2>Recent jobs</h2>
+        <p>Real projects from around DFW: stone flower beds, flagstone patios, walkways, sod and more.</p>
+      </div>
+      <div class="ba">
+        <figure><span class="tag">BEFORE</span><img src="photos/sod-before.jpg" alt="Bare, torn-up front yard before sod installation" loading="lazy"></figure>
+        <figure><span class="tag after">AFTER</span><img src="photos/sod-after.jpg" alt="Same front yard with fresh sod installed" loading="lazy"></figure>
+        <div class="ba-caption"><b>Sod installation:</b> bare dirt to a full green front yard.</div>
+      </div>
+      <div class="gallery" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <section id="quote" style="background:#eef3e6">
+    <div class="wrap quote-wrap">
+      <div>
+        <span class="kicker">Free quote</span>
+        <h2 style="font-size:clamp(1.8rem,4vw,2.5rem)">Tell us about your yard</h2>
+        <p style="color:var(--muted)">Send your address and what you need. We'll get back to you with a price, usually within one business day.</p>
+        <ul class="contact-list">
+          <li>✉️ <a data-email href="#"></a></li>
+          <li data-phone-only>📞 <a data-call data-phone-label href="#"></a></li>
+          <li>📍 Dallas–Fort Worth, TX</li>
+        </ul>
+      </div>
+
+      <form id="quote-form" method="POST">
+        <div class="row">
+          <label>Name <input name="name" required autocomplete="name"></label>
+          <label>Phone <input name="phone" type="tel" autocomplete="tel"></label>
+        </div>
+        <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        <label>Property address <input name="address" required autocomplete="street-address"></label>
+        <div>
+          <label style="margin-bottom:8px">Services needed</label>
+          <div class="checks" id="service-checks"></div>
+        </div>
+        <div class="row">
+          <label>Property type
+            <select name="property_type"><option>Residential</option><option>Commercial</option></select>
+          </label>
+          <label>How often?
+            <select name="frequency"><option>Weekly</option><option>Bi-weekly</option><option>One-time</option><option>Not sure</option></select>
+          </label>
+        </div>
+        <label>Anything else? <textarea name="message" rows="4" placeholder="Gate code, dogs in the yard, overgrown areas…"></textarea></label>
+        <input type="hidden" name="_subject" value="New quote request: Adrian's Lawn Service & Handyman website">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="btn" type="submit">Send Quote Request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Adrian's Lawn Service and Handyman, LLC · Dallas–Fort Worth, TX</div>
+    <div><a data-email href="#"></a></div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" data-call href="#">📞 Call</a>
+  <a class="text" data-text href="#">💬 Text</a>
+</div>
+
+<script>
+  // ===== EDIT YOUR BUSINESS INFO HERE =====
+  const BUSINESS = {
+    email: "aqqtown@gmail.com",
+    phone: "",            // e.g. "817-555-1234". Leave blank to hide Call/Text buttons.
+  };
+
+  // price: e.g. "From $45 / visit". Leave "" to show "Free quote".
+  const SERVICES = [
+    { icon: "🌱", name: "Lawn Care", items: ["Weekly mowing", "Edging & string trimming", "Weed control", "Yard cleanup"], price: "" },
+    { icon: "🌷", name: "Landscaping", items: ["Flower bed maintenance", "Mulch installation", "Sod installation", "Gravel installation"], price: "" },
+    { icon: "🌳", name: "Tree & Hedge Trimming", items: ["Tree trimming", "Hedge & shrub trimming"], price: "" },
+    { icon: "💧", name: "Irrigation & Drainage", items: ["Sprinkler repair", "Irrigation systems", "Drainage solutions"], price: "" },
+    { icon: "🧱", name: "Retaining Walls & Stone", items: ["Retaining walls", "Stone work", "Gravel paths & beds"], price: "" },
+    { icon: "🚧", name: "Fences", items: ["Fence repair", "Fence installation"], price: "" },
+    { icon: "🔧", name: "Handyman & Pressure Washing", items: ["Handyman services", "Pressure washing", "Property maintenance"], price: "" },
+    { icon: "🏢", name: "Commercial Landscaping", items: ["Recurring commercial service", "Multi-property accounts", "Grounds maintenance"], price: "" },
+  ];
+
+  const AREAS = ["Dallas", "Fort Worth", "Arlington", "Irving", "Hurst", "Frisco"];
+
+  // Put photos in the "photos" folder next to this file, then list them here:
+  // { src: "photos/front-yard.jpg", caption: "Weekly mow, Fort Worth" }
+  const PHOTOS = [
+    { src: "photos/curved-stone-bed.jpg", caption: "Curved stone flower bed" },
+    { src: "photos/flagstone-patio.jpg", caption: "Flagstone patio" },
+    { src: "photos/stone-flower-bed.jpg", caption: "Stone flower bed & plantings" },
+    { src: "photos/river-rock-walkway.jpg", caption: "River rock walkway with stepping stones" },
+    { src: "photos/stone-retaining-wall.jpg", caption: "Stone retaining wall" },
+    { src: "photos/brick-flower-bed.jpg", caption: "Brick-edged flower bed" },
+    { src: "photos/flagstone-gravel-patio.jpg", caption: "Flagstone & gravel patio" },
+    { src: "photos/ac-screen-fence.jpg", caption: "Custom cedar A/C screen" },
+    { src: "photos/backyard-flower-bed.jpg", caption: "Backyard flower bed" },
+    { src: "photos/gravel-paver-walkway.jpg", caption: "Gravel & paver side yard" },
+    { src: "photos/stone-raised-bed.jpg", caption: "Stone raised bed" },
+    { src: "photos/concrete-patio.jpg", caption: "Patio extension" },
+  ];
+  // ========================================
+
+  const digits = BUSINESS.phone.replace(/\D/g, "");
+  if (digits) {
+    document.body.classList.add("has-phone");
+    document.querySelectorAll("[data-call]").forEach(a => a.href = "tel:+1" + digits.slice(-10));
+    document.querySelectorAll("[data-text]").forEach(a => a.href = "sms:+1" + digits.slice(-10));
+    document.querySelectorAll("[data-phone-label]").forEach(a => a.textContent = BUSINESS.phone);
+  }
+  document.querySelectorAll("[data-email]").forEach(a => { a.href = "mailto:" + BUSINESS.email; a.textContent = BUSINESS.email; });
+  document.getElementById("quote-form").action = "https://formsubmit.co/" + BUSINESS.email;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("service-grid").innerHTML = SERVICES.map(s => `
+    <div class="card"><div class="icon">${s.icon}</div><h3>${s.name}</h3><ul>${s.items.map(i => `<li>${i}</li>`).join("")}</ul>
+    <div class="price">${s.price || "Free quote"}</div></div>`).join("");
+
+  document.getElementById("service-checks").innerHTML = SERVICES.map(s =>
+    `<label><input type="checkbox" name="services" value="${s.name}"> ${s.name}</label>`).join("");
+
+  document.getElementById("area-list").innerHTML = AREAS.map(a => `<span>📍 ${a}</span>`).join("");
+
+  document.getElementById("gallery-grid").innerHTML = PHOTOS.length
+    ? PHOTOS.map(p => `<figure><a href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.caption}" loading="lazy"></a><figcaption>${p.caption}</figcaption></figure>`).join("")
+    : ["Weekly mowing", "Landscaping", "Fence work", "Pressure washing"].map(c =>
+        `<figure><div class="placeholder">Photo coming soon</div><figcaption>${c}</figcaption></figure>`).join("");
+</script>
+</body>
+</html>
