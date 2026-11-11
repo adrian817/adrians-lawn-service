@@ -10,11 +10,13 @@
 {"@context":"https://schema.org","@type":"LandscapingBusiness","name":"Adrian's Lawns Service and Handyman, LLC","email":"adrian@adrianslawn.com","telephone":"+1-817-703-6820","url":"https://adrianslawn.com","areaServed":["Dallas, TX","Fort Worth, TX","Arlington, TX","Irving, TX","Hurst, TX","Frisco, TX"],"description":"Lawn care, landscaping, irrigation, handyman, assembly and moving services for residential and commercial properties in Dallas–Fort Worth."}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --green-900: #12301f;
+    --green-900: #0d2817;
+    --green-800: #143a22;
     --green-700: #1f5a36;
+    --mint: #e4f6d8;
     --green-500: #2f8a4f;
     --lime: #b8e05a;
     --cream: #f7f5ee;
@@ -27,14 +29,14 @@
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
-  h1, h2, h3 { font-family: Archivo, Inter, sans-serif; line-height: 1.15; margin: 0 0 .5em; }
+  h1, h2, h3 { font-family: Fredoka, Inter, sans-serif; font-weight: 700; line-height: 1.12; margin: 0 0 .5em; }
   a { color: inherit; }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 
   /* Header */
   header { position: sticky; top: 0; z-index: 10; background: var(--green-900); color: #fff; }
   header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: Archivo; font-weight: 800; font-size: 1.1rem; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: Fredoka; font-weight: 700; font-size: 1.15rem; letter-spacing: .01em; }
   .logo svg { flex: none; }
   .logo .amp { color: var(--lime); }
   @media (max-width: 420px) { .logo { font-size: .95rem; } }
@@ -54,11 +56,21 @@
   .card li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 7px; height: 7px; border-radius: 50%; background: var(--green-500); }
 
   /* Hero */
-  .hero { background: linear-gradient(100deg, rgba(18,48,31,.96) 0%, rgba(18,48,31,.85) 45%, rgba(18,48,31,.35) 100%), url("photos/hero.jpg") center 60% / cover, var(--green-900); color: #fff; padding: 84px 0 110px; position: relative; overflow: hidden; }
-  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 40px; background: var(--cream);
-    clip-path: polygon(0 100%, 0 40%, 2% 0, 4% 45%, 6% 5%, 8% 40%, 10% 0, 12% 45%, 14% 8%, 16% 42%, 18% 0, 20% 45%, 22% 5%, 24% 40%, 26% 0, 28% 45%, 30% 8%, 32% 42%, 34% 0, 36% 45%, 38% 5%, 40% 40%, 42% 0, 44% 45%, 46% 8%, 48% 42%, 50% 0, 52% 45%, 54% 5%, 56% 40%, 58% 0, 60% 45%, 62% 8%, 64% 42%, 66% 0, 68% 45%, 70% 5%, 72% 40%, 74% 0, 76% 45%, 78% 8%, 80% 42%, 82% 0, 84% 45%, 86% 5%, 88% 40%, 90% 0, 92% 45%, 94% 8%, 96% 42%, 98% 0, 100% 40%, 100% 100%); }
-  .hero .eyebrow { display: inline-block; background: rgba(184,224,90,.18); color: var(--lime); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: .85rem; margin-bottom: 18px; }
-  .hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); font-weight: 800; max-width: 14ch; }
+  .hero { background: linear-gradient(100deg, rgba(13,40,23,.96) 0%, rgba(20,58,34,.86) 45%, rgba(20,58,34,.4) 100%), url("photos/hero.jpg") center 60% / cover, var(--green-900); color: #fff; padding: 84px 0 110px; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: repeating-conic-gradient(from 0deg at 30% 42%, rgba(184,224,90,.09) 0 5deg, transparent 5deg 12.86deg);
+    -webkit-mask: radial-gradient(circle at 30% 42%, #000 0, transparent 70%); mask: radial-gradient(circle at 30% 42%, #000 0, transparent 70%); }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 64px;
+    background: url("grass.svg") repeat-x bottom / 680px 64px; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .badge { position: absolute; right: 20px; top: -30px; width: 132px; height: 132px; border-radius: 50%; background: var(--lime); color: var(--green-900);
+    display: grid; place-content: center; text-align: center; font-family: Fredoka; font-weight: 700; line-height: 1; transform: rotate(-12deg);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35), inset 0 0 0 6px var(--lime), inset 0 0 0 8.5px var(--green-900); outline: 2px dashed var(--green-900); outline-offset: -14px; text-decoration: none; }
+  .badge b { font-size: 2.1rem; }
+  .badge span { font-size: 1rem; letter-spacing: .08em; margin-top: 4px; }
+  @media (max-width: 900px) { .badge { display: none; } }
+  .hero .eyebrow { display: inline-block; background: rgba(184,224,90,.16); color: var(--lime); padding: 7px 16px; border-radius: 999px; font-family: Fredoka; font-weight: 700; font-size: .9rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); font-weight: 800; max-width: 17ch; }
   .hero h1 span { color: var(--lime); }
   .hero p { font-size: 1.15rem; max-width: 52ch; opacity: .9; margin: 0 0 30px; }
   .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -76,13 +88,13 @@
   /* Services */
   .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
-  .card .icon { width: 46px; height: 46px; border-radius: 12px; background: #e8f3dc; display: grid; place-items: center; margin-bottom: 16px; }
+  .card .icon { width: 46px; height: 46px; border-radius: 12px; background: var(--mint); display: grid; place-items: center; margin-bottom: 16px; }
   .card h3 { font-size: 1.2rem; }
   .card p { color: var(--muted); margin: 0 0 14px; }
   .price { font-weight: 700; color: var(--green-700); font-size: .95rem; }
 
   /* Why us */
-  .why { background: var(--green-900); color: #fff; }
+  .why { background: repeating-conic-gradient(from 0deg at 50% 0%, rgba(184,224,90,.05) 0 4deg, transparent 4deg 10deg), var(--green-800); color: #fff; }
   .why .section-head p { color: rgba(255,255,255,.75); }
   .why .kicker { color: var(--lime); }
   .why .card { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12); }
@@ -150,7 +162,30 @@
 <header>
   <div class="wrap">
     <a class="logo" href="#top">
-      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#b8e05a"/><path d="M8 25c2-6 3-10 3-14M13 25c1-5 2-9 4-13M18 25c0-4 1-8 4-12M23 25c0-3 1-6 3-9" stroke="#12301f" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      <svg width="44" height="40" viewBox="0 0 393 354" aria-hidden="true">
+    <defs>
+      <mask id="logo-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="393" height="354">
+        <rect width="393" height="354" fill="white"/>
+        <g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M44 172 L100 121 L131 168 Z" stroke-width="8"/>
+          <path d="M104 118 L141 82" stroke-width="7"/>
+          <ellipse cx="151" cy="73" rx="15" ry="9" transform="rotate(-42 151 73)" stroke-width="6"/>
+        </g>
+        <path d="M222 44 L222 169 L349 169 Z" fill="black"/>
+        <g fill="black"><rect x="204" y="18" width="5" height="2.6"/><rect x="204" y="27" width="9" height="2.6"/><rect x="204" y="36" width="5" height="2.6"/><rect x="204" y="45" width="9" height="2.6"/><rect x="204" y="54" width="5" height="2.6"/><rect x="204" y="63" width="9" height="2.6"/><rect x="204" y="72" width="5" height="2.6"/><rect x="204" y="81" width="9" height="2.6"/><rect x="204" y="90" width="5" height="2.6"/><rect x="204" y="99" width="9" height="2.6"/><rect x="204" y="108" width="5" height="2.6"/><rect x="204" y="117" width="9" height="2.6"/><rect x="204" y="126" width="5" height="2.6"/><rect x="204" y="135" width="9" height="2.6"/><rect x="204" y="144" width="5" height="2.6"/><rect x="204" y="153" width="9" height="2.6"/><rect x="204" y="162" width="5" height="2.6"/><rect x="204" y="171" width="9" height="2.6"/><rect x="204" y="180" width="5" height="2.6"/></g>
+        <g fill="black">
+          <path d="M92 236 Q110 214 128 236 Z"/>
+          <path d="M102 236 L118 236 L116 312 L110 330 L104 312 Z"/>
+        </g>
+        <g stroke="white" stroke-width="3.2" stroke-linecap="round"><path d="M98 258 L122 251" /><path d="M98 267 L122 260" /><path d="M98 276 L122 269" /><path d="M98 285 L122 278" /><path d="M98 294 L122 287" /><path d="M98 303 L122 296" /><path d="M98 312 L122 305" /></g>
+      </mask>
+    </defs>
+    <g fill="#e4f6d8" mask="url(#logo-cut)">
+      <path d="M0 187 L188 0 L188 187 Z"/>
+      <path d="M202 0 L393 187 L202 187 Z"/>
+      <rect x="33" y="200" width="155" height="154"/>
+      <rect x="202" y="200" width="47" height="24" rx="1.5"/><rect x="255" y="200" width="47" height="24" rx="1.5"/><rect x="308" y="200" width="47" height="24" rx="1.5"/><rect x="202" y="231" width="20" height="24" rx="1.5"/><rect x="228" y="231" width="47" height="24" rx="1.5"/><rect x="281" y="231" width="47" height="24" rx="1.5"/><rect x="334" y="231" width="21" height="24" rx="1.5"/><rect x="202" y="262" width="47" height="24" rx="1.5"/><rect x="255" y="262" width="47" height="24" rx="1.5"/><rect x="308" y="262" width="47" height="24" rx="1.5"/><rect x="202" y="293" width="20" height="24" rx="1.5"/><rect x="228" y="293" width="47" height="24" rx="1.5"/><rect x="281" y="293" width="47" height="24" rx="1.5"/><rect x="334" y="293" width="21" height="24" rx="1.5"/><rect x="202" y="324" width="47" height="24" rx="1.5"/><rect x="255" y="324" width="47" height="24" rx="1.5"/><rect x="308" y="324" width="47" height="24" rx="1.5"/>
+    </g></svg>
       <span>Adrian's Lawns Service <span class="amp">&amp; Handyman</span></span>
     </a>
     <nav>
@@ -166,7 +201,8 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Lawn Care · Landscaping · Handyman · DFW</span>
+      <a class="badge" href="#quote"><b>FREE</b><span>QUOTES</span></a>
+      <span class="eyebrow">Cutting grass, setting stone: we do it all</span>
       <h1>A sharp lawn, <span>every single visit.</span></h1>
       <p>Reliable lawn service, affordable landscaping, handyman work, assembly and moving help for homes and businesses across Dallas, Fort Worth and Arlington. One call takes care of the whole property.</p>
       <div class="actions">
